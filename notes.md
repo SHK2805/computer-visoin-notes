@@ -47,6 +47,8 @@
 
 #### Convolutional Neural Networks (CNNs)
 
+##### [CNN Explainer](https://poloclub.github.io/cnn-explainer/)
+
 * Convolutional Neural Networks (CNNs) are a class of deep learning models commonly used for image recognition and computer vision tasks.
 * They are designed to automatically and adaptively learn spatial hierarchies of features from input images.
 
@@ -130,18 +132,81 @@
 * By combining convolutional layers, activation functions, pooling layers, and fully connected layers, CNNs can automatically learn hierarchical representations of images, leading to accurate and robust predictions.
 
 
-### Steps of CNN
+#### Steps of CNN
 
 * The steps that happen in a Convolutional Neural Network (CNN):
 
-1. **Input Layer**: The input layer receives raw pixel data from an image. The size of the input layer corresponds to the image dimensions.
-2. **Convolutional Layer**: This layer applies convolutional filters to the input image to detect various features, such as edges, textures, and patterns. Each filter produces a feature map.
-3. **Activation Function**: After convolution, an activation function (commonly ReLU) is applied to introduce non-linearity into the model, allowing it to learn complex patterns.
-4. **Pooling Layer**: The pooling layer reduces the spatial dimensions (width and height) of the feature maps while retaining the most important information. This is typically done using max pooling.
-5. **Fully Connected Layer**: These layers are dense layers where every neuron is connected to every neuron in the previous layer. They are used to combine the features learned by the convolutional and pooling layers to make a final prediction.
-6. **Output Layer**: The output layer produces the final prediction. For classification tasks, this layer usually applies a softmax activation function to generate class probabilities.
+    1. **Input Layer**: The input layer receives raw pixel data from an image. The size of the input layer corresponds to the image dimensions.
+    2. **Convolutional Layer**: This layer applies convolutional filters to the input image to detect various features, such as edges, textures, and patterns. Each filter produces a feature map.
+    3. **Activation Function**: After convolution, an activation function (commonly ReLU) is applied to introduce non-linearity into the model, allowing it to learn complex patterns.
+    4. **Pooling Layer**: The pooling layer reduces the spatial dimensions (width and height) of the feature maps while retaining the most important information. This is typically done using max pooling.
+    5. **Fully Connected Layer**: These layers are dense layers where every neuron is connected to every neuron in the previous layer. They are used to combine the features learned by the convolutional and pooling layers to make a final prediction.
+    6. **Output Layer**: The output layer produces the final prediction. For classification tasks, this layer usually applies a softmax activation function to generate class probabilities.
 
 * These steps allow CNNs to automatically and efficiently learn features directly from raw image data, making them highly effective for image recognition and classification tasks.
 
+
+#### Padding
+
+* Padding is the process of adding extra pixels to the edges of an image before applying the convolutional filter. It helps control the spatial size of the output feature maps.
+
+* **Valid Padding**
+    * No padding is applied, which means the output feature map will be smaller than the input. Only valid regions of the image are convolved.
+    
+* **Same Padding**
+    * Padding is applied to ensure that the output feature map has the same spatial dimensions as the input. This is achieved by adding zeros around the input image.
+
+* **Full Padding**
+    * Padding is applied so that the filter can cover the entire input image, including its borders. This results in a larger output feature map.
+
+* **Zero Padding**
+    * Specifically refers to adding zeros around the border of the input image. This is commonly used in CNNs to preserve the spatial dimensions of the input in the output feature map.
+
+* **Pixel Padding**
+    * Involves adding pixel values from the input image around its borders. Instead of zeros, actual pixel values are repeated to maintain more context and information in the borders.
+
+* These padding techniques allow CNNs to maintain control over the spatial dimensions of the feature maps during the convolution process. 
+* They each have unique purposes and are chosen based on the specific requirements of the neural network architecture.
+
+Got it! Here's the information about different kinds of pooling:
+
+#### Pooling
+* Pooling is a down-sampling operation that reduces the dimensionality of feature maps while retaining the most important information. It helps to make the model more computationally efficient and robust.
+
+* **Max Pooling**
+    * Takes the maximum value from each region of the feature map. This helps to retain the most prominent features.
+
+* **Average Pooling**
+    * Computes the average value for each region of the feature map. This is useful for retaining overall spatial information.
+
+* **Global Max Pooling**
+    * Similar to max pooling, but instead of pooling over a small region, it takes the maximum value over the entire feature map.
+
+* **Global Average Pooling**
+    * Similar to average pooling, but it computes the average value over the entire feature map, typically used in the final layers of the network.
+
+* These pooling techniques help in reducing the size of the feature maps while preserving important information, making the CNN more efficient and effective in recognizing patterns.
+
+#### Pooling Usage
+* Pooling usage
+
+* **Max Pooling**
+    * **Context**: Often used in CNNs to highlight the most significant features of the input, such as edges or textures. It helps to reduce the dimensionality of the feature maps while preserving important information.
+    * **Example**: In object recognition tasks, max pooling is effective in focusing on the most prominent parts of the objects.
+
+* **Average Pooling**
+    * **Context**: Used when the aim is to retain more of the overall spatial information rather than just the most prominent features. It smooths out the feature maps, making the model more robust to noise.
+    * **Example**: In tasks like image segmentation where the overall context is important, average pooling is preferred.
+
+* **Global Max Pooling**
+    * **Context**: Often used in the final layers of a CNN to reduce each feature map to a single value. This is particularly useful for fully connected layers that follow the convolutional and pooling layers.
+    * **Example**: In image classification tasks, global max pooling helps to summarize the presence of certain features across the entire image.
+
+* **Global Average Pooling**
+    * **Context**: Also used in the final layers of a CNN to reduce each feature map to a single value, similar to global max pooling. It is commonly used in networks like Inception and ResNet.
+    * **Example**: In tasks like object detection, global average pooling provides a smooth representation of the feature maps, which can be beneficial for the final classification.
+
+* These pooling techniques are chosen based on the specific requirements of the task and the architecture of the neural network. 
+* They help in efficiently reducing the size of the feature maps while retaining the most relevant information.
 
 
