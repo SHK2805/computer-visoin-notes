@@ -130,5 +130,18 @@
 * By combining convolutional layers, activation functions, pooling layers, and fully connected layers, CNNs can automatically learn hierarchical representations of images, leading to accurate and robust predictions.
 
 
+### Steps of CNN
+
+* The steps that happen in a Convolutional Neural Network (CNN):
+
+1. **Input Layer**: The input layer receives raw pixel data from an image. The size of the input layer corresponds to the image dimensions.
+2. **Convolutional Layer**: This layer applies convolutional filters to the input image to detect various features, such as edges, textures, and patterns. Each filter produces a feature map.
+3. **Activation Function**: After convolution, an activation function (commonly ReLU) is applied to introduce non-linearity into the model, allowing it to learn complex patterns.
+4. **Pooling Layer**: The pooling layer reduces the spatial dimensions (width and height) of the feature maps while retaining the most important information. This is typically done using max pooling.
+5. **Fully Connected Layer**: These layers are dense layers where every neuron is connected to every neuron in the previous layer. They are used to combine the features learned by the convolutional and pooling layers to make a final prediction.
+6. **Output Layer**: The output layer produces the final prediction. For classification tasks, this layer usually applies a softmax activation function to generate class probabilities.
+
+* These steps allow CNNs to automatically and efficiently learn features directly from raw image data, making them highly effective for image recognition and classification tasks.
+
 
 
