@@ -1,0 +1,21 @@
+# Notes
+
+
+### Image Variations
+Computer vision models use various image variations to improve their accuracy and robustness. 
+These variations help the model generalize better and handle different conditions. 
+Here are some common image variations used:
+
+1. **Rotation**: Images are rotated to different angles to help the model recognize objects from various orientations.
+2. **Scaling**: Images are resized to different scales, which aids the model in understanding objects of different sizes.
+3. **Cropping**: Parts of the image are randomly cropped to help the model focus on different portions and maintain its effectiveness even when only parts of the object are visible.
+4. **Flipping**: Images are flipped horizontally or vertically to provide mirrored versions, which can help the model recognize objects from different perspectives.
+5. **Brightness Adjustment**: The brightness of images is altered to make the model robust to different lighting conditions.
+6. **Contrast Adjustment**: Adjusting the contrast of images helps the model handle varying contrasts in real-world scenarios.
+7. **Color Jittering**: Randomly changing the hue, saturation, and brightness of images to make the model more adaptable to different color variations.
+8. **Noise Addition**: Adding random noise to images to make the model more resilient to noisy or low-quality inputs.
+9. **Occlusion**: Partially covering objects in images to train the model to recognize objects even when they are partially hidden.
+10. **Affine Transformations**: Applying transformations like shearing, scaling, and rotating to simulate different viewpoints and perspectives.
+
+These variations, among others, are used during the training process to augment the dataset and improve the model's performance in real-world applications. 
+By exposing the model to a wide range of variations, it becomes better at generalizing and recognizing objects under different conditions.
