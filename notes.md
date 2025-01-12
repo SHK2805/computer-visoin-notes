@@ -210,3 +210,28 @@ Got it! Here's the information about different kinds of pooling:
 * They help in efficiently reducing the size of the feature maps while retaining the most relevant information.
 
 
+#### Batch normalization
+* **Batch normalization** is a technique used in deep learning to improve the training of neural networks. 
+* It works by normalizing the inputs of each layer to have a **mean of zero** and a **standard deviation of one**. 
+* This helps stabilize and accelerate the training process by reducing internal covariate shift.
+    * **Normalization**: For each mini-batch, batch normalization calculates the mean and variance of the inputs. It then normalizes the inputs using these statistics.
+    * **Scaling and Shifting**: After normalization, it applies scaling and shifting parameters, which are learned during training, to the normalized inputs. This allows the model to maintain its capacity to represent complex functions.
+* Batch normalization can help address issues like vanishing or exploding gradients, making the training process more robust and allowing for the use of higher learning rates. 
+* It also acts as a form of regularization, reducing the need for other techniques like dropout.
+
+#### The vanishing gradient problem
+* The vanishing gradient problem is a challenge that occurs during the training of deep neural networks, particularly those with many layers, such as recurrent neural networks (RNNs) and deep feedforward networks. 
+* In backpropagation, the algorithm used to train neural networks, the gradients of the loss function with respect to the weights are calculated and used to update the weights. 
+* When the **gradient values are very small (close to zero), the weights are updated very slowly**. 
+* This slows down the learning process and, in some cases, can effectively **stop** the network from training further. This phenomenon is known as the vanishing gradient problem.
+* The main causes of the vanishing gradient problem are:
+    * **Activation Functions**: Some activation functions, like the sigmoid or hyperbolic tangent (tanh), can cause gradients to become very small for certain input values.
+    * **Network Depth**: As the number of layers in the network increases, the gradients can become exponentially smaller as they propagate backward through the network.
+* Solutions to address the vanishing gradient problem include:
+    * **Using Different Activation Functions**: Activation functions like ReLU (Rectified Linear Unit) help mitigate the vanishing gradient problem because they do not saturate and maintain larger gradients.
+    * **Batch Normalization**: As we discussed earlier, batch normalization can stabilize and accelerate training by normalizing the inputs of each layer.
+    * **Residual Networks**: Adding skip connections or residual connections in deep networks can help gradients flow more easily.
+* It is adviced to use batch size of 2, 4, 8, 16, 32, 64 ...
+
+
+
