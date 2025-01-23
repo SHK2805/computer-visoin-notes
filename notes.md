@@ -233,5 +233,42 @@ Got it! Here's the information about different kinds of pooling:
     * **Residual Networks**: Adding skip connections or residual connections in deep networks can help gradients flow more easily.
 * It is adviced to use batch size of 2, 4, 8, 16, 32, 64 ...
 
+#### Architectures
+
+* **Convolutional Neural Networks (CNNs)**:
+   - **LeNet-5**: One of the earliest CNNs designed for handwritten digit recognition.
+   - **AlexNet**: Popularized deep learning by winning the ImageNet competition in 2012.
+   - **VGGNet**: Known for its simplicity and depth, with 16-19 layers.
+   - **GoogLeNet (Inception)**: Introduced the inception module to efficiently capture multi-scale features.
+
+* **Residual Networks (ResNets)**:
+   - **ResNet**: Introduced skip connections to solve the vanishing gradient problem, enabling very deep networks.
+   - **ResNeXt**: Combines ResNet's skip connections with grouped convolutions for more efficient learning.
+
+* **Dense Networks (DenseNets)**:
+   - **DenseNet**: Every layer is connected to every other layer, promoting feature reuse and reducing the number of parameters.
+
+* **Attention Mechanisms**:
+   - **Squeeze-and-Excitation Networks (SENets)**: Apply attention on channel-wise feature maps.
+   - **Vision Transformers (ViTs)**: Adapt the transformer architecture from natural language processing to computer vision tasks.
+
+* **Generative Adversarial Networks (GANs)**:
+   - **DCGAN**: Deep Convolutional GANs, used for generating realistic images.
+   - **StyleGAN**: Generates high-quality, photorealistic images with style transfer capabilities.
+
+* **Object Detection Architectures**:
+   - **R-CNN (Region-based CNN)**: Proposes regions in the image and classifies them.
+   - **YOLO (You Only Look Once)**: Predicts bounding boxes and class probabilities directly from full images.
+   - **SSD (Single Shot MultiBox Detector)**: Combines high speed and accuracy for object detection.
+
+* **Segmentation Architectures**:
+   - **Fully Convolutional Networks (FCNs)**: Replaces fully connected layers with convolutions for pixel-wise prediction.
+   - **U-Net**: Symmetrical encoder-decoder architecture, widely used in medical image segmentation.
+   - **Mask R-CNN**: Extends Faster R-CNN for instance segmentation by adding a branch for predicting segmentation masks.
+
+* **Self-Supervised Learning**:
+   - **SimCLR**: Utilizes contrastive learning to pre-train image representations without labeled data.
+   - **MoCo (Momentum Contrast)**: Builds a dynamic dictionary for self-supervised learning.
+
 
 
